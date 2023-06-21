@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a95c588-a6b5-4fbe-8ccf-dd6f24e081c3" name="Changes" comment="" />
+    <list default="true" id="1a95c588-a6b5-4fbe-8ccf-dd6f24e081c3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/audit.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delaware_ship_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/delaware_ship_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Sticker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Sticker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StickerPrintingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StickerPrintingApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ReadDataFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ReadDataFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stickers.csv" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,26 +27,30 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2ObA2MSNz69ok1aDsj2JHULaaep" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "preferences.pathVariables"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.StickerPrintingApp">
     <configuration name="StickerPrintingApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
@@ -89,16 +102,6 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="application.properties" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/ReadDataFile.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
 </project>

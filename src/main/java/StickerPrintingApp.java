@@ -25,11 +25,12 @@ public class StickerPrintingApp {
         Collections.sort(revisedOrder);
         List<Sticker> stickers = retrieveStickers(revisedOrder);
         printStickers(stickers);
+        incoming.readXlForShipName();
     }
 
     public static List<Sticker> retrieveStickers(List<Product> order) {
         ReadDataFile shipNameRead = new ReadDataFile();
-        String shipName = shipNameRead.readShipName();
+        String shipName = shipNameRead.readXlForShipName();
         List<Sticker> stickers = new ArrayList<>();
         for (Product item : order) {
             stickers.addAll(item.makeStickers(shipName));
@@ -41,7 +42,6 @@ public class StickerPrintingApp {
         File stickersForPrinting = new File("stickers.csv");
         try (PrintWriter writer = new PrintWriter(stickersForPrinting)) {
             for (Sticker sticker : stickers) {
-                //System.out.println(sticker);
                 writer.println(sticker);
             }
         } catch (IOException e) {

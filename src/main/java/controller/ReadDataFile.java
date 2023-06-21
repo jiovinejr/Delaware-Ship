@@ -1,8 +1,11 @@
 package controller;
 
 import Model.Product;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -13,6 +16,35 @@ public class ReadDataFile {
 
     File TestFile = new File("TestFile.csv");
     File ActualOrderFile = new File("ActualOrderFile.csv");
+
+    public String readXlForShipName() {
+        try {
+            String shipNameAndNum = "";
+            FileInputStream excelFile = new FileInputStream("MV POLAR BRASIL-325082.xlsm");
+            Workbook workbook = new XSSFWorkbook(excelFile);
+            DataFormatter dataFormatter = new DataFormatter();
+            Iterator<Sheet> sheet = workbook.sheetIterator();
+            while(sheet.hasNext()) {
+                Sheet sh = sheet.next();
+                Iterator<Row> rowIterator = sh.iterator();
+                while (rowIterator.hasNext()) {
+                    Row row = rowIterator.next();
+                    for (Cell cell : row) {
+                        if (cell.getCellType() != CellType.BLANK) {
+                            if(row.getRowNum() == 0) {
+                                shipNameAndNum = cell.getStringCellValue();
+                            }
+                        }
+                    }
+                }
+            }
+        return shipNameAndNum;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
 
     public String readShipName() {
         String shipName = "";

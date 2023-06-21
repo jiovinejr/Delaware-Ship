@@ -24,6 +24,30 @@ public class Sticker {
         this.itemName = itemName;
     }
 
+    public BigDecimal getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(BigDecimal quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getPackaging() {
+        return packaging;
+    }
+
+    public void setPackaging(String packaging) {
+        this.packaging = packaging;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
     public String getShipName() {
         return shipName;
     }
@@ -58,7 +82,11 @@ public class Sticker {
 
     @Override
     public String toString() {
-
-        return DELAWARE_SHIP + "," + shipName + "," + quantity + "," + packagingCleanUp(packaging) + "," + itemName;
+        String qty = quantity.toString();
+        String pck = packagingCleanUp(packaging);
+        if(itemName.equals("Watermelons")) {
+            qty = "";
+        }
+        return DELAWARE_SHIP + "," + shipName + "," + qty + "," + pck + "," + itemName;
     }
 }
