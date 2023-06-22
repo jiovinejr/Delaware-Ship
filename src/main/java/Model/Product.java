@@ -63,7 +63,7 @@ public class Product implements Comparable<Product>{
     }
 
     public List<Sticker> makeStickers(String shipName) {
-        System.out.println(itemName + " " + baseCase + " " + packaging);
+//        System.out.println(itemName + " " + baseCase + " " + packaging);
         List<Sticker> result = new ArrayList<>();
         if (packaging.equals("BX") || packaging.equals("BG") || packaging.equals("CS")) {
             while (quantity.compareTo(ONE_CASE) > 0) {
