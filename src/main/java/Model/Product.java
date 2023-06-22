@@ -87,6 +87,15 @@ public class Product implements Comparable<Product>{
     }
 
     @Override
+    public String toString() {
+        return "Product{" +
+                "quantity=" + quantity +
+                ", packaging='" + packaging + '\'' +
+                ", itemName='" + itemName + '\'' +
+                '}';
+    }
+
+    @Override
     public int compareTo(Product product) {
         return this.getItemName().compareTo(product.getItemName());
     }

@@ -20,12 +20,12 @@ public class StickerPrintingApp {
     public static void main(String[] args) {
 
         ReadDataFile incoming = new ReadDataFile();
-        List<Product> order = incoming.loadFile();
+        List<Product> order = incoming.readXlForProducts();
         List<Product> revisedOrder = changeName(order);
         Collections.sort(revisedOrder);
         List<Sticker> stickers = retrieveStickers(revisedOrder);
         printStickers(stickers);
-        incoming.readXlForShipName();
+        incoming.readXlForProducts();
     }
 
     public static List<Sticker> retrieveStickers(List<Product> order) {

@@ -17,6 +17,7 @@ public class ReadDataFile {
     File TestFile = new File("TestFile.csv");
     File ActualOrderFile = new File("ActualOrderFile.csv");
 
+    //FOR EXCEL FILES
     public String readXlForShipName() {
         try {
             String shipNameAndNum = "";
@@ -24,32 +25,58 @@ public class ReadDataFile {
             Workbook workbook = new XSSFWorkbook(excelFile);
             DataFormatter dataFormatter = new DataFormatter();
             Iterator<Sheet> sheet = workbook.sheetIterator();
-            while(sheet.hasNext()) {
+            while (sheet.hasNext()) {
                 Sheet sh = sheet.next();
                 Iterator<Row> rowIterator = sh.iterator();
                 while (rowIterator.hasNext()) {
                     Row row = rowIterator.next();
                     for (Cell cell : row) {
                         if (cell.getCellType() != CellType.BLANK) {
-                            if(row.getRowNum() == 0) {
+                            if (row.getRowNum() == 0) {
                                 shipNameAndNum = cell.getStringCellValue();
                             }
                         }
                     }
                 }
             }
-        return shipNameAndNum;
+            return shipNameAndNum;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<Product> readXlForProducts() {
+        try {
+            List<Product> products = new ArrayList<>();
+            FileInputStream excelFile = new FileInputStream("MV POLAR BRASIL-325082.xlsm");
+            Workbook workbook = new XSSFWorkbook(excelFile);
+            DataFormatter dataFormatter = new DataFormatter();
+            Iterator<Sheet> sheet = workbook.sheetIterator();
+            while (sheet.hasNext()) {
+                Sheet sh = sheet.next();
+                for (Row row : sh) {
+                    if (row.getCell(0).getCellType() != CellType.BLANK) {
+                        String bigDecUse = dataFormatter.formatCellValue(row.getCell(0));
+                        BigDecimal constUseQty = new BigDecimal(bigDecUse);
+                        String packaging = dataFormatter.formatCellValue(row.getCell(1));
+                        String itemName = dataFormatter.formatCellValue(row.getCell(2));
+                        Product product = new Product(constUseQty, packaging, itemName);
+                        products.add(product);
+                    }
+                }
+            }
+            return products;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
 
-
+    //FOR CSV FILES
     public String readShipName() {
         String shipName = "";
         try (Scanner scanner = new Scanner(ActualOrderFile)) {
-            while(scanner.hasNext()) {
+            while (scanner.hasNext()) {
                 shipName = scanner.nextLine().split(",")[2];
                 break;
             }
@@ -79,7 +106,8 @@ public class ReadDataFile {
                         currentProduct = new Product(qtyAsBD, packaging, itemName);
                         orderSheet.add(currentProduct);
                     }
-                } counter++;
+                }
+                counter++;
             }
         } catch (NumberFormatException e) {
             System.out.println("Bad number.");

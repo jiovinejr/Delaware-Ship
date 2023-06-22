@@ -7,9 +7,7 @@
     <list default="true" id="1a95c588-a6b5-4fbe-8ccf-dd6f24e081c3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/audit.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delaware_ship_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/delaware_ship_db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Sticker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Sticker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StickerPrintingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StickerPrintingApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ReadDataFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ReadDataFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stickers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stickers.csv" afterDir="false" />
