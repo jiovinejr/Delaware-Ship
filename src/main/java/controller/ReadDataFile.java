@@ -1,6 +1,8 @@
 package controller;
 
 import Model.Product;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -47,15 +49,24 @@ public class ReadDataFile {
 
     public List<Product> readXlForProducts() {
         try {
+            //  MV POLAR BRASIL-325082.xlsm
+            String shipOrderFile = "ExcelOrder.xls";
+            Workbook workbook;
             List<Product> products = new ArrayList<>();
-            FileInputStream excelFile = new FileInputStream("MV POLAR BRASIL-325082.xlsm");
-            Workbook workbook = new XSSFWorkbook(excelFile);
+            FileInputStream excelFile = new FileInputStream(shipOrderFile);
+            if (shipOrderFile.endsWith(".xls")) {
+                workbook = new HSSFWorkbook(excelFile);
+            } else {
+                workbook = new XSSFWorkbook(excelFile);
+            }
+            int numOfSheets = workbook.getNumberOfSheets();
+            int sheetIndex = workbook.getActiveSheetIndex();
             DataFormatter dataFormatter = new DataFormatter();
             Iterator<Sheet> sheet = workbook.sheetIterator();
-            while (sheet.hasNext()) {
-                Sheet sh = sheet.next();
+                Sheet sh = workbook.getSheetAt(sheetIndex);
                 for (Row row : sh) {
                     if (row.getCell(0).getCellType() != CellType.BLANK) {
+                        //System.out.println(row.getCell(0));
                         String bigDecUse = dataFormatter.formatCellValue(row.getCell(0));
                         BigDecimal constUseQty = new BigDecimal(bigDecUse);
                         String packaging = dataFormatter.formatCellValue(row.getCell(1));
@@ -64,9 +75,10 @@ public class ReadDataFile {
                         products.add(product);
                     }
                 }
-            }
+
             return products;
         } catch (Exception e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }

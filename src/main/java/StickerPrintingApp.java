@@ -1,6 +1,7 @@
 import Model.Product;
 import Model.Sticker;
 import controller.Audit;
+import controller.NewReadData;
 import controller.ReadDataFile;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -20,17 +21,17 @@ public class StickerPrintingApp {
     public static void main(String[] args) {
 
         ReadDataFile incoming = new ReadDataFile();
-        List<Product> order = incoming.readXlForProducts();
+        File file = new File("ExcelOrder.xls");
+        NewReadData trial = new NewReadData(file);
+        List<Product> order = trial.productsFromExcelOrder(trial.getSheet());
         List<Product> revisedOrder = changeName(order);
         Collections.sort(revisedOrder);
-        List<Sticker> stickers = retrieveStickers(revisedOrder);
+        List<Sticker> stickers = retrieveStickers(revisedOrder, trial.getShipName());
         printStickers(stickers);
-        incoming.readXlForProducts();
+        //incoming.readXlForProducts();
     }
 
-    public static List<Sticker> retrieveStickers(List<Product> order) {
-        ReadDataFile shipNameRead = new ReadDataFile();
-        String shipName = shipNameRead.readXlForShipName();
+    public static List<Sticker> retrieveStickers(List<Product> order, String shipName) {
         List<Sticker> stickers = new ArrayList<>();
         for (Product item : order) {
             stickers.addAll(item.makeStickers(shipName));

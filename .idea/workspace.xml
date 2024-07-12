@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a95c588-a6b5-4fbe-8ccf-dd6f24e081c3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/NewReadData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StickerPrintingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StickerPrintingApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ReadDataFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ReadDataFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stickers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/ReadDataFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ReadDataFile.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +47,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "preferences.pathVariables"
+    "last_opened_file_path": "C:/Users/jiovi/.m2/repository/commons-io",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RunManager" selected="Application.StickerPrintingApp">
@@ -97,5 +112,25 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="application.properties" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/ReadDataFile.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/NewReadData.java</url>
+          <line>70</line>
+          <properties class="controller.NewReadData" method="workbookFromFile">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

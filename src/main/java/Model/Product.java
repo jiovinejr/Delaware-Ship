@@ -13,6 +13,22 @@ public class Product implements Comparable<Product>{
     private String packaging;
     private String itemName;
     private BigDecimal baseCase;
+    private String shipName;
+
+    public String getShipName() {
+        return shipName;
+    }
+
+    public void setShipName(String shipName) {
+        this.shipName = shipName;
+    }
+
+    public Product(BigDecimal quantity, String packaging, String itemName, String shipName) {
+        this.quantity = quantity;
+        this.packaging = packaging;
+        this.itemName = itemName;
+        this.shipName = shipName;
+    }
 
     public BigDecimal getQuantity() {
         return quantity;
@@ -89,9 +105,12 @@ public class Product implements Comparable<Product>{
     @Override
     public String toString() {
         return "Product{" +
-                "quantity=" + quantity +
+                "ONE_CASE=" + ONE_CASE +
+                ", quantity=" + quantity +
                 ", packaging='" + packaging + '\'' +
                 ", itemName='" + itemName + '\'' +
+                ", baseCase=" + baseCase +
+                ", shipName='" + shipName + '\'' +
                 '}';
     }
 
