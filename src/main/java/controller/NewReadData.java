@@ -38,9 +38,9 @@ public class NewReadData {
         List<Product> products = new ArrayList<>();
         for (Row row : sheet){
             if (row.getCell(0).getCellType() != CellType.BLANK) {
-                Product orderRecord = mapExcelRowToProduct(row);
-                products.add(orderRecord);
-                System.out.println(orderRecord.toString());
+                Product product = mapExcelRowToProduct(row);
+                products.add(product);
+                System.out.println(product.toString());
             }
         }
         return products;
