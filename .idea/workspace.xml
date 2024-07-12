@@ -7,7 +7,6 @@
     <list default="true" id="1a95c588-a6b5-4fbe-8ccf-dd6f24e081c3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delaware_ship_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/delaware_ship_db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/NewReadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/NewReadData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
